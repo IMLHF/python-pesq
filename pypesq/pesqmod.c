@@ -941,10 +941,10 @@ void pesq_psychoacoustic_model(SIGNAL_INFO    * ref_info,
 
         short_term_fft (Nf, ref_info, Whanning, start_sample_ref, hz_spectrum_ref, fft_tmp);
         
-        if (err_info-> Nutterances < 1) {
-            printf ("Processing error!\n");
-            exit (1);
-        }
+//         if (err_info-> Nutterances < 1) {
+//             printf ("Processing error!\n");
+//             exit (1);
+//         }
 
         utt = err_info-> Nutterances - 1;
         while ((utt >= 0) && (err_info-> Utt_Start [utt] * Downsample > start_sample_ref)) {
