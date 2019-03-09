@@ -11,10 +11,10 @@ Version 2.0 - October 2005.
 DEFINITIONS:
 ------------
 For the purposes of this Intellectual Property Rights Notice
-the terms ‘Perceptual Evaluation of Speech Quality Algorithm’
-and ‘PESQ Algorithm’ refer to the objective speech quality
+the terms â€˜Perceptual Evaluation of Speech Quality Algorithmâ€™
+and â€˜PESQ Algorithmâ€™ refer to the objective speech quality
 measurement algorithm defined in ITU-T Recommendation P.862;
-the term ‘PESQ Software’ refers to the C-code component of P.862.
+the term â€˜PESQ Softwareâ€™ refers to the C-code component of P.862.
 These definitions also apply to those parts of ITU-T Recommendation 
 P.862.2 and its associated source code that are common with P.862.
 
@@ -469,7 +469,7 @@ void crude_align(
         startr = (*err_info).UttSearch_Start[Utt_id];
         startd = startr + (*err_info).Crude_DelayEst / Downsample;
 
-        if ( startd < 0L )
+        if ( startd <= 0L )
         {
             startr = -(*err_info).Crude_DelayEst / Downsample;
             startd = 0L;
