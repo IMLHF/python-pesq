@@ -469,7 +469,7 @@ void crude_align(
         startr = (*err_info).UttSearch_Start[Utt_id];
         startd = startr + (*err_info).Crude_DelayEst / Downsample;
 
-        if ( startd <= 0L )
+        if ( startd < 0L )
         {
             startr = -(*err_info).Crude_DelayEst / Downsample;
             startd = 0L;
